@@ -1,0 +1,6 @@
+<div class="diary-1">
+  <%= form_for @diary,:url => {:controller => :diary,:action => :create} do |f| %>
+    <%= f.text_area :text, row: 6, placeholder:'本文を入力してください', class: "blog-text"%>
+    <%= f.submit "投稿する", class: "post" %>
+  <% end %>
+</div>

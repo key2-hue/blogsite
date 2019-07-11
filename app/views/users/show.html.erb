@@ -1,0 +1,20 @@
+<div class="mypage posts">
+  <h2>投稿一覧です！</h2>
+  <button class="button-hide">投稿を隠す<button>
+  <button class="button-show">投稿を表示する</button>
+  <% @user.diaries.each do |user| %>
+    <section class="mypage-text collection #4dd0e1 cyan lighten-2">
+      <%= simple_format(user.text) %>
+    </section>
+  <% end %>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.button-hide').on("click", function(){
+      $('.mypage-text').hide();
+    });
+    $('.button-show').on("click", function(){
+      $('.mypage-text').fadeIn(2000);
+    });
+  });
+</script>

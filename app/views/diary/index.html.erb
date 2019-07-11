@@ -1,0 +1,12 @@
+<div class="profile">
+  <a href="/profile/1" class="my-profile">
+    <span>My profile</span>
+  </a>
+</div>
+
+<div class="posts">  
+  <% @diaries.each do |diary| %>
+    <%= render partial: "index", locals:{ diary: diary }%>
+  <% end %>
+  <%= paginate(@diaries)%>
+</div>

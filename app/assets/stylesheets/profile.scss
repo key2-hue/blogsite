@@ -1,0 +1,19 @@
+// Place all the styles related to the profile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.my-detail {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.sky {
+  display: block;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 20px auto 10px;
+}
+
+.collection .collection-item {
+  background-color: green;
+}

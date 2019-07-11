@@ -1,0 +1,9 @@
+<div class="diary-edit">
+  <h3>
+    編集する
+  </h3>
+  <%= form_for @diary do |f| %>
+    <%= f.text_area :text, value: @diary.text %>
+    <%= f.submit "編集完了"%>
+  <% end %>
+</div>

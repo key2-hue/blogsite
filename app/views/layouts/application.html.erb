@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogsite</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="header">
+    <nav>
+      <div class="nav-wrapper">
+        <h1><a href="/" class="brand-logo">Blog</a></h1>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+          <li><%= link_to 'Mypage', "/users/#{current_user.id}", method: :get, class: :new %></li>
+          <li><%= link_to 'Signout', '/users/sign_out' , method: :delete, class: :new %></li>
+          <li><%= link_to 'New', "/diary/new", method: :get, class: :new %></li>
+        <% else %>
+          <li><%= link_to 'Signin', '/users/sign_in' , method: :post, class: :new %></li>
+        <% end %>
+        </ul>
+      </div>
+    </nav>
+    </header>
+    <style>
+     
+      body {
+        margin-top: -48px;
+      }
+
+      nav {
+        height: 80px;
+        background-color: blue;
+        min-width: 960px;
+      }
+
+      nav .brand-logo {
+      padding-left: 50px;
+      }
+
+      .new {
+        padding-bottom: 20px;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        $('.header').on('mouseover', function() {
+          $('.header').slideDown(1000);
+        });
+      });
+    </script>
+    <%= yield %>
+  </body>
+</html>

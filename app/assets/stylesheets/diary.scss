@@ -1,0 +1,147 @@
+// Place all the styles related to the diary controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//diary/show.html.erb
+
+.screen {
+  font-size: 45px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.collection.description {
+  font-size: 40px;
+  width: 960px;
+  margin: 60px auto;
+  height: 100px;
+  text-align:center;
+  line-height: 100px;
+}
+
+//ここまで
+
+// diary/index.html.erb
+
+.profile {
+  width: 100%;
+  float: right;
+  height: 0;
+}
+
+.my-profile {
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  display: block;
+  height: 50px;/*高さ*/
+  width: 190px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 25px;/*文字のサイズ*/
+  line-height: 50px;/*高さと合わせる*/
+  background: #1da1f3;
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+  float: right;
+  margin: 30px 30px 0 0;
+}
+
+.my-profile .fa-twitter {
+  text-shadow: 2px 2px 0px #4287d6;
+  font-size: 30px;
+}
+
+.my-profile span {
+  display:inline-block;
+  transition: .5s;
+}
+
+.my-profile:hover span {
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+
+.posts {
+  width: 960px;
+  margin: 0 auto;
+  clear: both;
+  margin-top: 30px;
+}
+
+
+.collection {
+  margin-top: 30px;
+  width: 960px;
+  padding-left: 10px;
+  background-color: orange;
+}
+
+.collection-item {
+  background-color: orange;
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+
+.detail {
+  float: right;
+}
+
+.card {
+  color: green;
+}
+
+.waves-effect {
+  margin-left: 20px;
+  
+}
+
+// ここまで
+
+.divider {
+  /* 画像ファイルの指定 */
+  background-image: url(images/sky.jpg);
+    
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+    
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+    
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+    
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+    
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+}
+
+.blog {
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 50px;
+  color: white;
+}
+
+.new {
+  list-style: none;
+  float: right;
+  padding-top: 10px;
+  padding-right: 30px;
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+}
+
+.new:hover {
+  opacity: 0.8;
+}
+
+p {
+  clear: both;
+}
+

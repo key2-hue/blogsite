@@ -1,0 +1,9 @@
+<div class="collection teal lighten-2">
+  <%= simple_format(diary.text, :class=> "collection-item　teal lighten-2") %>
+    <span class="card">投稿ユーザー:</span><%= diary.user_id %>
+    <% if user_signed_in? && current_user.id == diary.user_id %>
+      <%= link_to  '削除', "/diary/#{diary.id}", method: :delete, class: :"waves-effect waves-light btn" %>
+      <%= link_to '編集', "/diary/#{diary.id}/edit", method: :get, class: :"waves-effect waves-light btn"  %>
+      <%= link_to '詳細', "/diary/#{diary.id}", method: :get, class: :"waves-effect waves-light btn"  %>
+    <% end %>
+</div>
